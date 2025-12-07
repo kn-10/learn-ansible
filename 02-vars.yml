@@ -8,5 +8,11 @@
       ansible.builtin.debug:
         msg: URL = {{ URL }}
 
+    - name: Print variables in task
+      vars:
+        URL: tasks.google.com
+      ansible.builtin.debug:
+        msg: URL in tasks is {{ URL }}
+
   roles:
     - demo
