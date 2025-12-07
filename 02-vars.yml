@@ -7,3 +7,6 @@
     - name: Print Play Level Url
       ansible.builtin.debug:
         msg: URL = {{ URL }}
+
+  roles:
+    - demo
