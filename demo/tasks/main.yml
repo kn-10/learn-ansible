@@ -1,3 +1,4 @@
 - name: Print vars from play using roles
   ansible.builtin.debug:
     msg: The URL is {{ URL }}
+
