@@ -1,0 +1,9 @@
+- name: Demo on vars
+  hosts: localhost
+  vars:
+    URL: play.google.com
+
+  tasks:
+    - name: Print Play Level Url
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
