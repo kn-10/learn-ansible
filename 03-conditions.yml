@@ -4,10 +4,10 @@
     - name: Say Hi to John
       ansible.builtin.debug:
         msg: Hey Johnny
-        when: user == John
+      when: user == "John"
 
     - name: Say Hi to Deeksha
       ansible.builtin.debug:
         msg: Hey Crazy Girl Deekshu
-        when: user == Deeksha
+      when: user == "Deeksha"
 
