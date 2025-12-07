@@ -1,10 +1,10 @@
 - name: Demo on Loops
   hosts: localhost
   tasks:
-    - name: Loop Demo
+    - name: Loop Demo on maps
       ansible.builtin.debug:
-        msg: Hi, {{ item }}
+        msg: Hi {{ item.name }}, is your age {{ item.age }} years ?
       loop:
-        - Ram
-        - Karan
-        - Deeksha
+        - { name: "Karan", age: 31 }
+        - { name: "Deeksha", age: 27 }
+        - { name: "Rohan", age: 33 }
