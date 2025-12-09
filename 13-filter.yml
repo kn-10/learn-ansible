@@ -13,5 +13,5 @@
 
     - name: Split Url
       ansible.builtin.debug:
-        msg: "{{ URL | splitext('/') }}"
+        msg: "{{ URL | split('/') | last | regex_replace('.zip') }}"
 
