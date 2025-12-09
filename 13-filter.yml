@@ -1,0 +1,17 @@
+- name: Filters
+  hosts: localhost
+  vars:
+    URL: https://nginx.org/download/nginx-1.25.3.zip
+
+  tasks:
+    - name: Filter
+      ansible.builtin.unarchive:
+        src: "{{URL}}"
+        dest: /tmp
+        remote_src: true
+
+
+    - name: Split Url
+      ansible.builtin.debug:
+        msg: "{{ URL | splitext('/') }}"
+
