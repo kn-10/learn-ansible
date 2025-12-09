@@ -8,6 +8,6 @@
       notify: Say Hello Again
 
   handlers:
-    - name: Say Hello again
+    - name: Say Hello Again
       ansible.builtin.debug:
         msg: Hello {{ name }} again !!
